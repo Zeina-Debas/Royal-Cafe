@@ -214,8 +214,7 @@ private void InitializationPanelEast() {
             panel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
             panel.setLayout(new BorderLayout());
 
-//            System.out.println("/images/" + imageNames[i]);
-//            System.out.println(getClass().getResource("/images/" + imageNames[i]));
+
             //تحميل الصوره
             ImageIcon icon = new ImageIcon(getClass().getResource("/" + imageNames[i]));
             Image img = icon.getImage().getScaledInstance(250, 130, Image.SCALE_AREA_AVERAGING);
@@ -225,12 +224,11 @@ private void InitializationPanelEast() {
             // add label price
             JLabel labelprice = new JLabel("PRICE" + " " + price[i]);
             labelprice.setFont(new Font("Arial", Font.BOLD, 14));
-            //add spinner
-  //
+
   
   URL url = getClass().getResource("/images/" + imageNames[i]);
 System.out.println("Image URL for " + imageNames[i] + ": " + url);
-  //
+  
             SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 5, 1);
 
             JSpinner spinner = new JSpinner(model);
@@ -273,7 +271,6 @@ System.out.println("Image URL for " + imageNames[i] + ": " + url);
     
 
    private void updateOrderTextArea() {
-    // مشابهة للدالة showTotal لكن بدون إعادة حساب المجموع لأن الدالة calculateTotal() موجودة
     StringBuilder sb = new StringBuilder("Royal cafe\n");
     for (Component comp : Panelfood.getComponents()) {
         if (comp instanceof JPanel panel) {
