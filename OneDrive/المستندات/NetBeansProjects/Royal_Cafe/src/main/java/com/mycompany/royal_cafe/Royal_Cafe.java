@@ -23,7 +23,7 @@ public class Royal_Cafe extends JFrame {
         InitializationPanelEast();
         InitializationPanelNorth();
         InitializationPanelSouth();
-//
+
 
         add(TabbedPane, BorderLayout.CENTER);
         add(PanelEast, BorderLayout.EAST);
@@ -60,8 +60,6 @@ public class Royal_Cafe extends JFrame {
             panel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
             panel.setLayout(new BorderLayout());
 
-//            System.out.println("/images/" + imageNames[i]);
-//            System.out.println(getClass().getResource("/images/" + imageNames[i]));
             //تحميل الصوره
             ImageIcon icon = new ImageIcon(getClass().getResource("/" + imageNames[i]));
             Image img = icon.getImage().getScaledInstance(250, 130, Image.SCALE_AREA_AVERAGING);
@@ -144,12 +142,10 @@ private void InitializationPanelEast() {
     totalLabel.setText("Total: " + total + " ₪");
 });
 
-    // لوحة للأزرار والليبل تستخدم BoxLayout عمودي
     JPanel buttonPanel = new JPanel();
     buttonPanel.setBackground(new Color(240, 251, 242));
     buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
-    // محاذاة الوسط للزر والليبل
     totalButton.setAlignmentX(Component.CENTER_ALIGNMENT);
     totalLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
